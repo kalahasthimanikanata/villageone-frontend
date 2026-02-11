@@ -1,3 +1,4 @@
+/* RESET */
 * {
   margin: 0;
   padding: 0;
@@ -5,115 +6,300 @@
   font-family: Arial, Helvetica, sans-serif;
 }
 
-.app {
-  text-align: center;
-}
-
+/* ========================= */
 /* NAVBAR */
+/* ========================= */
+
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 15px 50px;
-  position: absolute;
-  width: 100%;
-  color: white;
-  z-index: 10;
-}
-
-.navbar ul {
-  display: flex;
-  list-style: none;
-  gap: 25px;
   align-items: center;
+  background: #14532d;
+  color: white;
+  padding: 15px 20px;
 }
 
-.login-btn {
-  background: white;
-  color: green;
-  padding: 8px 15px;
-  border-radius: 20px;
+.logo {
+  font-size: 20px;
+  font-weight: bold;
   cursor: pointer;
 }
 
-/* HERO */
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+.nav-links li {
+  cursor: pointer;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+/* ========================= */
+/* HERO SECTION */
+/* ========================= */
+
 .hero {
-  height: 90vh;
+  height: 100vh;
+  position: relative;
   background-size: cover;
   background-position: center;
-  position: relative;
+  background-repeat: no-repeat;
 }
 
 .overlay {
-  background: rgba(0, 0, 0, 0.55);
   height: 100%;
-  color: white;
+  background: rgba(0, 0, 0, 0.6);
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
+  color: white;
+  text-align: center;
+  padding: 20px;
 }
 
 .overlay h1 {
-  font-size: 45px;
+  font-size: 32px;
   margin-bottom: 10px;
 }
 
 .overlay h2 {
-  font-size: 32px;
+  font-size: 22px;
   margin-bottom: 20px;
 }
 
-.payment-icons span {
-  background: white;
-  color: black;
-  padding: 8px 15px;
-  margin: 5px;
-  border-radius: 8px;
-}
-
-/* SHOP CARDS */
-.shops {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px;
-  padding: 40px;
-}
-
-.card {
-  background: #f2c66d;
-  padding: 30px;
-  border-radius: 15px;
-  font-size: 20px;
+.button-group button,
+.payment-group button {
+  padding: 10px 20px;
+  margin: 10px;
+  border: none;
+  background: #16a34a;
+  color: white;
+  border-radius: 6px;
+  cursor: pointer;
   font-weight: bold;
 }
 
-/* TRUST */
+.button-group button:hover,
+.payment-group button:hover {
+  background: #15803d;
+}
+
+/* ========================= */
+/* SHOP CARDS */
+/* ========================= */
+
+.shops {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 40px 20px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: #f3f4f6;
+  padding: 20px;
+  border-radius: 10px;
+  width: 200px;
+  text-align: center;
+  font-weight: bold;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* ========================= */
+/* TRUST SECTION */
+/* ========================= */
+
 .trust {
   display: flex;
   justify-content: center;
-  gap: 30px;
-  padding: 40px;
+  gap: 40px;
+  padding: 40px 20px;
+  background: #ecfdf5;
+  flex-wrap: wrap;
 }
 
 .trust-box {
-  background: #14532d;
-  color: white;
-  padding: 25px 40px;
-  border-radius: 10px;
+  text-align: center;
 }
 
 .trust-box h3 {
   font-size: 28px;
+  color: #14532d;
 }
 
+/* ========================= */
 /* HOW IT WORKS */
+/* ========================= */
+
 .how {
-  padding: 40px;
+  padding: 50px 20px;
+  text-align: center;
+  background: #f9fafb;
 }
 
+.how-title {
+  font-size: 28px;
+  margin-bottom: 30px;
+  color: #14532d;
+}
+
+/* Landscape Layout */
 .steps {
-  margin-top: 15px;
   display: flex;
   justify-content: center;
-  gap: 30px;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.step-card {
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+  width: 280px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+  font-size: 16px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.step-card:hover {
+  transform: translateY(-5px);
+}
+
+/* ========================= */
+/* CONTACT SECTION */
+/* ========================= */
+
+.contact-section {
+  padding: 50px 20px;
+  text-align: center;
+  background: #14532d;
+  color: white;
+}
+
+.social-links {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.social-links a {
+  background: white;
+  color: #14532d;
+  padding: 10px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.social-links a:hover {
+  background: #16a34a;
+  color: white;
+}
+
+
+/* ========================= */
+/* REGISTER & LOGIN FORM */
+/* ========================= */
+
+.form-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to right, #14532d, #065f46);
+  padding: 20px;
+}
+
+.form-box {
+  background: white;
+  padding: 30px;
+  width: 100%;
+  max-width: 500px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+}
+
+.form-box h2 {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.form-box h3 {
+  margin-top: 20px;
+  margin-bottom: 10px;
+  color: #14532d;
+}
+
+.form-box input {
+  width: 100%;
+  padding: 10px;
+  margin: 8px 0;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+}
+
+.form-box button {
+  width: 100%;
+  padding: 10px;
+  margin-top: 15px;
+  background: #14532d;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.form-box button:hover {
+  background: #0f3d23;
+}
+
+.link {
+  margin-top: 15px;
+  text-align: center;
+  color: #14532d;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.link:hover {
+  text-decoration: underline;
+}
+
+/* ========================= */
+/* MOBILE RESPONSIVE */
+/* ========================= */
+
+@media (max-width: 768px) {
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    right: 0;
+    background: #14532d;
+    flex-direction: column;
+    width: 200px;
+    padding: 20px;
+    display: none;
+  }
+
+  .nav-links.active {
+    display: flex;
+  }
+
+  .hamburger {
+    display: block;
+  }
 }
